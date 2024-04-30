@@ -1,8 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import reactRefresh from '@vitejs/plugin-react-refresh';
+import { VitePWA } from 'vite-plugin-pwa';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/project-3-calculator/',
-  plugins: [react()],
-})
+  plugins: [
+    reactRefresh(),
+    VitePWA()
+  ]
+});
